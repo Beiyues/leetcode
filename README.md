@@ -7,3 +7,7 @@ https://leetcode.cn/problems/sorting-the-sentence/<br>
 
 字符串<br>
 2288,价格减免<br>https://github.com/Beiyues/leetcode/blob/main/2288%E4%BB%B7%E6%A0%BC%E5%87%8F%E5%85%8D
+
+dfs<br>
+37.解数独
+40.组合综合II
