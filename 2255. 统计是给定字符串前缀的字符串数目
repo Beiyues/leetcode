@@ -1,0 +1,15 @@
+1，这个是关于前缀
+2，
+bool  isPrefix(string word,string s)
+    {
+            if (s.size() < word.size()) {
+                return false;
+            }
+            for (int i = 0; i < word.size(); ++i) {
+                if (word[i] != s[i]) {
+                    return false;
+                }
+            }
+            return true;
+        };
+     判断是不是字符串前缀的公式
