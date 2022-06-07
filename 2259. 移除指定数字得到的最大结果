@@ -1,0 +1,15 @@
+1，问题是怎么删除一个字母来比较
+2，没想到其实和上一个很像
+要注意的就是
+容器的一些用法
+ int n = number.size();
+        string res;   // 可以得到的最大结果
+        for (int i = 0; i < n; ++i) {
+            if (number[i] == digit) {
+                string tmp = number.substr(0, i);
+                tmp.append(number.substr(i + 1, n - i));
+                res = max(res, tmp);
+            }
+        }
+        return res;
+
