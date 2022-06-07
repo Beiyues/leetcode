@@ -1,0 +1,27 @@
+1,我是先把字母异位词分别存起来，然后，一个一个放进去即可。
+但是顺序不一样。
+可能不符合它这个一个个删除的特性。
+是有个相邻的特性没有考虑到。
+分类字母异位词
+ unordered_map<string,vector<string>> kk;
+        for(auto a:words)
+        {
+            auto tmp=a;
+            sort(tmp.begin(),tmp.end());
+            kk[tmp].emplace_back(a);
+        }
+判断两个单词是不是异位词
+vector<string> removeAnagrams(vector<string> &words)
+    {
+        // 如果相邻的字母是异位词，就删除后一个字母
+        for (int i = 0; i < words.size() - 1; ++i) // 注意i < words.size() - 1
+        {
+            if (isAnagram(words[i], words[i + 1]))
+            {
+                words.erase(words.begin() + i + 1);//注意这个erase可以删除单词。你用这个words.erase(i+1),是错的；
+                --i; // 注意回退一位，比如第一个和第二个同，回退一位，然后for循环i++，比较第一个和新的第二个（原来的第二个已经被erase()）
+            }
+        }
+        return words;
+    }
+
