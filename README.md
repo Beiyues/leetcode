@@ -6,4 +6,4 @@ https://leetcode.cn/problems/sorting-the-sentence/<br>
 就是那个2288涉及到的。<br>
 
 字符串<br>
-2288,价格减免<br>
+2288,价格减免<br>https://github.com/Beiyues/leetcode/blob/main/2288%E4%BB%B7%E6%A0%BC%E5%87%8F%E5%85%8D
