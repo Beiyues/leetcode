@@ -2,4 +2,10 @@
  istringstream iss(sentence);
         string t;
         while (getline(iss, t, ' ')) { // while (iss >> t)
+二，copy函数用法
+1，copy(d1.begin(),d1.end(),d2.begin());
+d1是已知容器
+d2是目的容器
+用的时候有点问题...
+
 
