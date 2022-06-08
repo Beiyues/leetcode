@@ -1,0 +1,5 @@
+一，截取stirng类型的空格
+ istringstream iss(sentence);
+        string t;
+        while (getline(iss, t, ' ')) { // while (iss >> t)
+
