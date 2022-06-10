@@ -1,0 +1,28 @@
+1，有无计算链表长度的模板
+2， int h(ListNode* head)
+    {
+        int cnt=0;
+        while(head!=nullptr)
+        {
+            head=head->next;
+            cnt++;
+        }
+        return cnt;
+    }
+    
+  3，
+    ListNode* cur=head;
+        
+        while(cur)
+        {
+            if(cur->next)
+            {
+                cur->next=cur->next->next;
+                cur=cur->next;
+            }
+            else
+                break;
+        }
+        return head;
+        这个能过我是真不懂了
+        ...另外删除链表果然要 有一个指针先指这个head(cur)
