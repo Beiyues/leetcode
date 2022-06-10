@@ -11,4 +11,14 @@ for (int i = 0; i <= n - k; ++i) {
  二，1903. 字符串中的最大奇数
  1，最大奇数就是，最长的
  2，所谓奇数，就是看最后一位数字是不是奇数。
+ 三，截取stirng类型的空格
+ istringstream iss(sentence);
+        string t;
+        while (getline(iss, t, ' ')) { // while (iss >> t)
+四，copy函数用法
+1，copy(d1.begin(),d1.end(),d2.begin());
+d1是已知容器
+d2是目的容器
+用的时候有点问题...
+
    
