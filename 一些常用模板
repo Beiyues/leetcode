@@ -20,5 +20,8 @@ for (int i = 0; i <= n - k; ++i) {
 d1是已知容器
 d2是目的容器
 用的时候有点问题...
+五，环和杆
+1，也可以用
+unordered_map<int,set<char>> 这种玩意
 
    
