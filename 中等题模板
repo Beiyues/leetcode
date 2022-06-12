@@ -27,5 +27,25 @@ while (x >= 0 && x < 8 && y >= 0 && y < 8){
                 x += dx;
                 y += dy;
             }
+二，2063. 所有子字符串中的元音
+对string类型全枚举的模板
+vector<char> t;
+    vector<vector<char>> ans;
+    void dfs(int cur, string& word) {
+        if (cur == word.size()) {
+            ans.push_back(t);
+            return;
+        }
+        t.push_back(word[cur]);
+        dfs(cur + 1, word);
+        t.pop_back();
+        dfs(cur + 1, word);
+    }
 
+
+    long long countVowels(string word) {
+        int n=word.size();
+        dfs(0, word);
+       这个模板可以，但是比如"aba",子集是没有"aa"的，但是它也给你搞了
+       因为是用的数组的枚举...
 
