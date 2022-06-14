@@ -1,3 +1,7 @@
+常见出错问题：
+1，member reference base type 'int' is not a structure or union
+https://stackoverflow.com/questions/58382478/for-loop-saying-error-member-reference-base-type-int-13-is-not-a-structure
+2，subscripted value is not an array, pointer, or vector
 一，对string类型的进行具体个数枚举
 for (int i = 0; i <= n - k; ++i) {
             // 枚举所有长度为 k 的子串
@@ -64,3 +68,47 @@ unordered_map<int,set<char>> 这种玩意
         return ans;
         
         很可以，另外那个ans++要在括号里面
+竞赛第六页，做完这个应该完了
+开始第五页
+一，2114. 句子中的最多单词数
+1，没难度
+二，2108. 找出数组中的第一个回文字符串
+1，积累下回文串的
+ bool ishuiwen(string a)
+    {
+        string b=a;
+        reverse(b.begin(),b.end());
+
+        for(int i=0;i<a.size();i++)
+        {
+            if(a[i]!=b[i]) return false;
+        }
+
+        return true;
+    }
+三，环和杆
+！四，2099. 找到和最大的长度为 K 的子序列
+1.怎么求数组类型的子序列
+vector<int> t;
+    vector<vector<int>> ans;
+
+    void dfs(int cur, vector<int>& nums) {
+        if (cur == nums.size()) {
+            ans.push_back(t);
+            return;
+        }
+        t.push_back(nums[cur]);
+        dfs(cur + 1, nums);
+        t.pop_back();
+        dfs(cur + 1, nums);
+    }
+
+    vector<vector<int>> subsets(vector<int>& nums) {
+        dfs(0, nums);
+        return ans;
+    }
+    用我的方法，总是卡在一些问题上？？
+五，2094. 找出 3 位偶数
+
+
+
